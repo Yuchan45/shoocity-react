@@ -1,0 +1,16 @@
+.container-totals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.container-totals-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 2%;
+    border: 1px solid gray;
+    width: 30%;
+    justify-content: space-evenly;
+    background-color: white;
+}
