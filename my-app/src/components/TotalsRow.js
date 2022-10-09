@@ -3,6 +3,10 @@ import '../css/totalsRow.css';
 
 function TotalsRow(){
     return(
+        <div>
+            <header className='totals-header'>
+                <h1 className='header-totals-title'>Dashboard</h1>
+           </header>
            <section className='container-totals'>
                 <div className='container-totals-item'>
                     <h1 className='item-totals-tittle'>Total Products</h1>
@@ -17,6 +21,8 @@ function TotalsRow(){
                     <p className='item-totals-text'>x</p>
                 </div>
            </section>
+        </div>
+           
     )
 }
 

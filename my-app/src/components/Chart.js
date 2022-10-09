@@ -2,6 +2,7 @@ import React /*{ useState, useEffect }*/from 'react';
 import Footer from './Footer';
 import TotalsRow from './TotalsRow';
 import LastCreatedRow from './LastCreatedRow';
+import NavBar from './NavBar';
 import '../css/chart.css'
 function Chart(){
     /*
@@ -17,6 +18,7 @@ function Chart(){
     }, []); */
     return(
         <div className='container-dashboard'>
+            <NavBar/>
             <TotalsRow/>
             <LastCreatedRow/>
             <Footer/>
