@@ -24,7 +24,6 @@ function App() {
               <ContentRow2/>
               <Title />
               <DataBase />
-              <Prueba />
             </div>
           </div>
           <Footer />

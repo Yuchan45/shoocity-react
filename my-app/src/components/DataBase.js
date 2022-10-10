@@ -2,12 +2,12 @@ import React, {useState, useEffect} from "react";
 import InfoTable from "./InfoTable";
 let data = [
     {
+        id: "Ningun id",
         model: "Ninguna información",
-        description:"Ninguna información",
         price:"$0",
-        category_id: ["Ninguna información"],
-        colors_hexa:["Ninguna infomación"],
-        stock: 0
+        brand_id: ["Ninguna información"],
+        stock: 0, 
+        creation_date: "No hay fecha"
     }
 ]
 
@@ -32,33 +32,33 @@ function DataBase(){
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Description</th>
+                                <th>Id</th>
+                                <th>Model</th>
                                 <th>Price</th>
-                                <th>Category</th>
-                                <th>Colors</th>
+                                <th>Brand</th>
                                 <th>Stock</th>
+                                <th>Creation date</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Name</th>
-                                <th>Description</th>
+                                <th>Id</th>
+                                <th>Model</th>
                                 <th>Price</th>
-                                <th>Category</th>
-                                <th>Colors</th>
+                                <th>Brand</th>
                                 <th>Stock</th>
+                                <th>Creation date</th>
                             </tr>
                         </tfoot>
                         {products.map((data,i)=>
 
                             <InfoTable key={i} 
+                                id= {data.id}
                                 model= {data.model}
-                                description= {data.description}
                                 price={data.price}
-                                category_id= {data.category_id.name}
-                                colors_hexa= {data.colors_hexa}
+                                brand_id= {data.brand_id.name}
                                 stock= {data.stock}
+                                creation_date= {data.creation_date}
                             />
                         )}
                     </table>

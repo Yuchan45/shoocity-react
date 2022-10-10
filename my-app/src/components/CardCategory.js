@@ -1,11 +1,11 @@
 import React from "react";
 
-function CardCategory({nameCategory, quantity}){
+function CardCategory({marca, count}){
     return (
         <div className="col-lg-6 mb-4">
             <div className="card bg-info text-white shadow">
                 <div className="card-body">
-                    {nameCategory}: {quantity} products
+                    {marca}: {count} products
 				</div>
                 
             </div>
