@@ -1,18 +1,17 @@
-import React from 'react';
-import '../css/footer.css';
-function Footer(){
-    return(
-            <footer>
-                <div class="footer-bounds">
-                    <div class="first-line">
-                        <p>Made with</p>
-                        <i class="fa-solid fa-heart"></i>
-                        <p>By</p> 
-                    </div>
-                    <h3>CODE APPLES</h3>
+import React from "react";
+
+function Footer() {
+    return (
+        <footer className="sticky-footer bg-white">
+            <div className="container my-auto">
+                <div className="copyright text-center my-auto">
+                    <span>Copyright &copy; Dashboard 2020</span>
                 </div>
-            </footer>
+            </div>
+        </footer>
     )
 }
+
+
 
 export default Footer;

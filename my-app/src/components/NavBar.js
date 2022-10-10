@@ -1,20 +1,10 @@
-import React from 'react';
-import '../css/navBar.css';
-function NavBar(){
-    return(
-        <header class="header-container">
-        <div class="header-bounds">
-            <div class="nav-search">
-                <a href="/">
-                    <div class="shoocity-logo">
-                        <h1 class="logo-title">Shoocity</h1>
-                        <h2 class="logo-slogan">Inspiration Works</h2>
-                    </div>
-                </a> 
-            </div>
+import React from "react";
+
+function NavBar() {
+    return (
+        <div className="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
         </div>
-        </header>
     )
 }
-
 export default NavBar;

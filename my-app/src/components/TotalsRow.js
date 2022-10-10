@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/totalsRow.css';
 
 function TotalsRow(){
     return(
