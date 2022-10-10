@@ -15,7 +15,7 @@ function Sidebar() {
 			<li className="nav-item active">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span></a>
+                        <span>Shoocity</span></a>
                 </li>
 			<hr className="sidebar-divider"/>
 			<div className="sidebar-heading">Actions</div>
@@ -35,7 +35,7 @@ function Sidebar() {
             </li>
 
 			<li className="nav-item">
-                <a className="nav-link" href="http://localhost:3001/productos/">
+                <a className="nav-link" href="http://localhost:3001/products/">
                     <i className="fas fa-fw fa-table"></i>
                     <span>Products</span>
                 </a>

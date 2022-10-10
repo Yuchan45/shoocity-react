@@ -2,21 +2,21 @@ import React, {useState} from "react";
 import PropTypes from "prop-types";
 
 
-function InfoTable({name, description, price, subcategory, colors, stock}) {
+function InfoTable({model, description, price, category_id, colors_hexa, stock}) {
     return (
         <tbody>
             <tr>
-                <td>{name}</td>
+                <td>{model}</td>
                 <td>{description}</td>
                 <td>{price}</td>
                 <td>
                     <ul>
-                        <li>{subcategory}</li>
+                        <li>{category_id}</li>
                     </ul>
                 </td>
                 <td>
                     <ul>
-                        {colors.map((color, i) => 
+                        {colors_hexa.map((color, i) => 
                         <li key={i}>
                             <span key={i} > 
                                 {color.name} 
@@ -32,18 +32,18 @@ function InfoTable({name, description, price, subcategory, colors, stock}) {
 }
 
 InfoTable.propTypes ={
-    name: PropTypes.string.isRequired,
+    model: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-    subcategory: PropTypes.string.isRequired,
+    category_id: PropTypes.string.isRequired,
     stock: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
 }
 InfoTable.defaultProps = {
-    name: "Sin nombre",
+    model: "Sin nombre",
     description: "Sin descripción",
     price: "",
-    subcategory: "",
-    colors:[""]
+    category_id: "",
+    colors_hexa:[""]
 }
 
 

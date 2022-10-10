@@ -3,11 +3,11 @@ import Etiqueta from "./EtiquetaRow" ;
 
 function ContentRow(){
     
-    let [products, setProducts] = useState("No dispone");
-    let [users, setUsers] = useState("Sin usuarios");
-    let [orders, setOrders] = useState("No dispone")
+    const [products, setProducts] = useState(["0"]);
+    const [users, setUsers] = useState(["0"]);
+    const [brands, setBrands] = useState(["0"])
 
-    let datos = [
+    let data = [
         {
             titulo: "Products in Data Base",
             cifra: products,
@@ -15,53 +15,49 @@ function ContentRow(){
             icono: "fa-clipboard-list"
         },
         {
-            titulo: "Purchase Orders",
-            cifra: orders,
+            titulo: "Total Users",
+            cifra: users,
             colorBorder: "success",
             icono: "fa-dollar-sign"
         },
         {
-            titulo: "Users quantity",
-            cifra: users,
+            titulo: "Total Brands",
+            cifra: brands,
             colorBorder: "warning",
             icono: "fa-user-check"
         }
     ]
     
- /*
     useEffect(() => {
         fetch("http://localhost:3001/api/products")
         .then(resultado => resultado.json())
         .then(dataProduct => {
-            setProducts(dataProduct.meta.total_products)
+            setProducts(dataProduct.count)
         })
 
-      
-        fetch("http://localhost:3001/api/users")
+        fetch("http://localhost:3001/api/brands")
         .then(resultado => resultado.json())
-        .then(dataOrders => {
-            setOrders(dataOrders.meta.total_orders)
-        }) 
+        .then(dataBrands => {
+            setBrands(dataBrands.count)
+        })
 
         fetch("http://localhost:3001/api/users")
         .then(resultado => resultado.json())
         .then(dataUser => {
-            
             setUsers(
-                dataUser.meta.total_users
-            )
-        })*/
-    
+                dataUser.count)
+        })
+    }, [])
 
     return (
         <>
             <div className="row">
-                {datos.map((dato, i) => 
+                {data.map((data, i) => 
                     <Etiqueta key={i} 
-                        titulo={dato.titulo} 
-                        cifra={dato.cifra}
-                        colorBorder={dato.colorBorder}
-                        icono={dato.icono}
+                        titulo={data.titulo} 
+                        cifra={data.cifra}
+                        colorBorder={data.colorBorder}
+                        icono={data.icono}
                     /> 
                 )}
             </div>

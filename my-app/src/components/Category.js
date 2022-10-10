@@ -3,13 +3,11 @@ import CardCategory from "./CardCategory";
 
 function Category(){
     let [categories, setCategories] = useState([{name:"Ninguna Categoria"}]);
-
-    //edited de "subcategories" a products
     useEffect(()=>{
-        fetch("http://localhost:3001/api/products")
+        fetch("http://localhost:3001/brands")
         .then(res => res.json())
         .then(data => {
-            setCategories(data.meta.quantityProducts)
+            setCategories(data.brands)
         })
 
     },[])

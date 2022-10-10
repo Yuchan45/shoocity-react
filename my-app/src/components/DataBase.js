@@ -1,19 +1,19 @@
 import React, {useState, useEffect} from "react";
 import InfoTable from "./InfoTable";
-let datos = [
+let data = [
     {
-        name: "Ninguna información",
+        model: "Ninguna información",
         description:"Ninguna información",
         price:"$0",
-        subcategory: ["Ninguna información"],
-        colors:["Ninguna infomación"],
+        category_id: ["Ninguna información"],
+        colors_hexa:["Ninguna infomación"],
         stock: 0
     }
 ]
 
 function DataBase(){
 
-    let [products, setProducts] = useState(datos);
+    let [products, setProducts] = useState(data);
 
     useEffect(()=>{
         fetch("http://localhost:3001/api/products")
@@ -35,7 +35,7 @@ function DataBase(){
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Price</th>
-                                <th>SubCategory</th>
+                                <th>Category</th>
                                 <th>Colors</th>
                                 <th>Stock</th>
                             </tr>
@@ -45,20 +45,20 @@ function DataBase(){
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Price</th>
-                                <th>SubCategory</th>
+                                <th>Category</th>
                                 <th>Colors</th>
                                 <th>Stock</th>
                             </tr>
                         </tfoot>
-                        {products.map((dato,i)=>
+                        {products.map((data,i)=>
 
                             <InfoTable key={i} 
-                                name= {dato.name}
-                                description= {dato.description}
-                                price={dato.price}
-                                subcategory= {dato.subcategory.name}
-                                colors= {dato.colors}
-                                stock= {dato.stock}
+                                model= {data.model}
+                                description= {data.description}
+                                price={data.price}
+                                category_id= {data.category_id.name}
+                                colors_hexa= {data.colors_hexa}
+                                stock= {data.stock}
                             />
                         )}
                     </table>

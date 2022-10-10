@@ -3,7 +3,6 @@ import CardProduct from "./CardLastProduct";
 
 function LastProduct() {
     let [product, setProduct] = useState({
-        location:"assets/images/product_dummy.svg", 
         description:"No se cargo ningun producto",
         urlProduct: "/" 
     })
@@ -13,9 +12,9 @@ function LastProduct() {
         .then(res => res.json())
         .then(data => {
             setProduct({    
-                description: data.meta.lastProducts[0].description,
-                location: "http://localhost:3001"+ data.meta.lastProducts[0].images[0].name,
-                urlProduct: "http://localhost:3001"+ data.meta.lastProducts[0].id
+                description: data.data.lastProducts[0].description,
+                location: "http://localhost:3001"+ data.data.lastProducts[0].images[0].name,
+                urlProduct: "http://localhost:3001"+ data.data.lastProducts[0].id
             })
 
         })
