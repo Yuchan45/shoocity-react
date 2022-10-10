@@ -5,7 +5,6 @@ let data = [
         id: "Ningun id",
         model: "Ninguna información",
         price:"$0",
-        brand_id: ["Ninguna información"],
         stock: 0, 
         creation_date: "No hay fecha"
     }
@@ -35,7 +34,6 @@ function DataBase(){
                                 <th>Id</th>
                                 <th>Model</th>
                                 <th>Price</th>
-                                <th>Brand</th>
                                 <th>Stock</th>
                                 <th>Creation date</th>
                             </tr>
@@ -45,7 +43,6 @@ function DataBase(){
                                 <th>Id</th>
                                 <th>Model</th>
                                 <th>Price</th>
-                                <th>Brand</th>
                                 <th>Stock</th>
                                 <th>Creation date</th>
                             </tr>
@@ -56,7 +53,6 @@ function DataBase(){
                                 id= {data.id}
                                 model= {data.model}
                                 price={data.price}
-                                brand_id= {data.brand_id.name}
                                 stock= {data.stock}
                                 creation_date= {data.creation_date}
                             />

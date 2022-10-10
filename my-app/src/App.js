@@ -8,7 +8,6 @@ import ContentRow from "./components/ContentRow";
 import ContentRow2 from "./components/ContentRow2";
 import Title from "./components/Title";
 import DataBase from "./components/DataBase";
-import Prueba from './components/Prueba';
 
 function App() {
   return (
